@@ -1,24 +1,26 @@
 
 import random
 
-def playGame():
-    numbers = [1, 2, 3, 4, 5]
-    secretNumber = random.choice(numbers)
-    attempts = 0
+# Pick a random number between 1 and 5
+secret = random.randint(1, 5)
 
-    print("Welcome to the Number Guessing Game!")
+# Track how many guesses the player makes
+attempts = 0
 
-    while True:
-        guess = int(input("Guess a number between 1 and 5: "))
-        attempts += 1
+# Tell the player the rules
+print("Guess a number from 1 to 5.")
 
-        if guess == secretNumber:
-            print("Correct, You guessed the number!")
-            print("Total attempts:", attempts)
-            break
-        elif guess < secretNumber:
-            print("Too low, Try again.")
-        else:
-            print("Too high!,Try again.")
+# Keep asking until the user guesses correctly
+while True:
+    guess = int(input("Your guess: "))
+    attempts += 1
 
-playGame()
+    # Check if the guess is correct
+    if guess == secret:
+        print("You win!")
+        print("Attempts:", attempts)
+        break
+    elif guess < secret:
+        print("Too low.")
+    else:
+        print("Too high.")
