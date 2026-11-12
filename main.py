@@ -1,4 +1,3 @@
-
 import random
 
 # Pick a random number between 1 and 5
@@ -9,13 +8,13 @@ attempts = 0
 
 # Tell the player the rules
 print("Guess a number from 1 to 5.")
+print("You have 3 guesses!")
 
-# Keep asking until the user guesses correctly
-while True:
+# Keep asking until the player runs out of guesses
+while attempts < 3:
     guess = int(input("Your guess: "))
     attempts += 1
 
-    # Check if the guess is correct
     if guess == secret:
         print("You win!")
         print("Attempts:", attempts)
@@ -24,3 +23,8 @@ while True:
         print("Too low.")
     else:
         print("Too high.")
+
+# Check if the player used all 3 guesses
+if guess != secret:
+    print("Game over! You ran out of guesses.")
+    print("The correct number was:", secret)

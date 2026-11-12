@@ -1,14 +1,11 @@
-# Assignment8
-This is a small repository that contains my assignment 8 for IS 450.
+# Assignment9
+This is a small repository that contains my assignment 9 for IS 450 
 
-The purpose of this program is to ask the user to guess a number and compare it to the random number generated
+This is the manual feature that contains my code from assignment 8 with an added feature that gives the user a specific number of guesses
 
-The AI tool utulized was copilot within visual studio code
+I expect the code to ask the user at a maximum of three tries
 
-I asked the AI to make the code very beginner friendly
+One case that would determine a success is if the user maxes out the attemots and gets the error message.
 
-Within the push. It made the code much simpler, getting rid of def and replacing it with a more beginner friendly method
+Another case that would demonstrate success is if the user guesses the number before running out of time.
 
-I accepted the AI suggestions and let it run wild
-
-The only steps needed to run the project are a number input.
